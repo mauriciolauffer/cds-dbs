@@ -4,6 +4,61 @@
 - The format is based on [Keep a Changelog](http://keepachangelog.com/).
 - This project adheres to [Semantic Versioning](http://semver.org/).
 
+## [3.0.0](https://github.com/mauriciolauffer/cds-dbs/compare/sqlite-v2.4.0...sqlite-v3.0.0) (2026-05-06)
+
+
+### ⚠ BREAKING CHANGES
+
+* remove PG `?` placeholder replacement ([#1180](https://github.com/mauriciolauffer/cds-dbs/issues/1180))
+* update peer dependency to cds9 ([#1178](https://github.com/mauriciolauffer/cds-dbs/issues/1178))
+* Unfiltered db constraint errors ([#1165](https://github.com/mauriciolauffer/cds-dbs/issues/1165))
+
+### refactor
+
+* Unfiltered db constraint errors ([#1165](https://github.com/mauriciolauffer/cds-dbs/issues/1165)) ([ff39e22](https://github.com/mauriciolauffer/cds-dbs/commit/ff39e22ac6cd3f20c98bc31c1a6bb828aa009796))
+
+
+### Added
+
+* decimal affinity in sqlite ([#1547](https://github.com/mauriciolauffer/cds-dbs/issues/1547)) ([9228adc](https://github.com/mauriciolauffer/cds-dbs/commit/9228adc22733b18934997506271a0c7fa6505eb8))
+* pass through of  arbitrary client options ([#1024](https://github.com/mauriciolauffer/cds-dbs/issues/1024)) ([b090ccd](https://github.com/mauriciolauffer/cds-dbs/commit/b090ccda2dfd4fa535aa0fd5be9d2fc27531db05))
+* remove PG `?` placeholder replacement ([#1180](https://github.com/mauriciolauffer/cds-dbs/issues/1180)) ([a1e0bd9](https://github.com/mauriciolauffer/cds-dbs/commit/a1e0bd9fe8501c284d8cbfc8d79d4dddda34c087))
+* Result set streaming ([#702](https://github.com/mauriciolauffer/cds-dbs/issues/702)) ([2fe02ea](https://github.com/mauriciolauffer/cds-dbs/commit/2fe02eafd02993e5697efbdab90ad997fb2c9e00))
+* show default pool configuration in `env` ([#1422](https://github.com/mauriciolauffer/cds-dbs/issues/1422)) ([89b397a](https://github.com/mauriciolauffer/cds-dbs/commit/89b397ade2a15be8ce81ed3e8d717fc98f1a8107))
+* supersede potentially compromised release ([#1590](https://github.com/mauriciolauffer/cds-dbs/issues/1590)) ([3be4044](https://github.com/mauriciolauffer/cds-dbs/commit/3be404417229a2dd539e4b40393d3bd346e4388c))
+* support for `node:sqlite` and `sql.js` ([#614](https://github.com/mauriciolauffer/cds-dbs/issues/614)) ([887d1bb](https://github.com/mauriciolauffer/cds-dbs/commit/887d1bba82347857364bc133983b9e16e054d6cd))
+* support for cds.Map ([#889](https://github.com/mauriciolauffer/cds-dbs/issues/889)) ([cde7514](https://github.com/mauriciolauffer/cds-dbs/commit/cde7514df20396383e0179ffce838596e3706bb2))
+* support for HANA history tables ([#1091](https://github.com/mauriciolauffer/cds-dbs/issues/1091)) ([cc649b9](https://github.com/mauriciolauffer/cds-dbs/commit/cc649b908c422811ae98f41673212d8618a148aa))
+
+
+### Fixed
+
+* Adopt to recurse `DistanceTo` cqn format ([#1093](https://github.com/mauriciolauffer/cds-dbs/issues/1093)) ([246e0b3](https://github.com/mauriciolauffer/cds-dbs/commit/246e0b38840f7e132ea49cae335b6be7a55354b3))
+* associations in `[@cds](https://github.com/cds).search` are additive ([#1355](https://github.com/mauriciolauffer/cds-dbs/issues/1355)) ([ea931cb](https://github.com/mauriciolauffer/cds-dbs/commit/ea931cb120c2857aa18a4eb68b893926c0999a9f))
+* boolean for sql_simple_queries  ([#886](https://github.com/mauriciolauffer/cds-dbs/issues/886)) ([d8139fa](https://github.com/mauriciolauffer/cds-dbs/commit/d8139fa2ea0cb6bebf966ac5b781b2f8f7c67207))
+* **deps:** update dependency better-sqlite3 to v12 ([#1253](https://github.com/mauriciolauffer/cds-dbs/issues/1253)) ([8975490](https://github.com/mauriciolauffer/cds-dbs/commit/8975490f29624a96d2c0f128b19a6ddc5b66f91d))
+* funcs.test.js used wrong arguments for .where() ([#943](https://github.com/mauriciolauffer/cds-dbs/issues/943)) ([33a0685](https://github.com/mauriciolauffer/cds-dbs/commit/33a0685623b3d6dca3841ac89a936a795f72b7a7))
+* hana groupby with path expressions ([#1493](https://github.com/mauriciolauffer/cds-dbs/issues/1493)) ([920acde](https://github.com/mauriciolauffer/cds-dbs/commit/920acdee0edb538b74d6e5cb0a82a086556df85e))
+* increase min version cap-js/db-service ([#876](https://github.com/mauriciolauffer/cds-dbs/issues/876)) ([e20eef8](https://github.com/mauriciolauffer/cds-dbs/commit/e20eef83f3ef0e1595932e31885096ca566cb153))
+* properly support `default`, `cds.on.insert` and `cds.on.update` for `UPSERT` queries ([#425](https://github.com/mauriciolauffer/cds-dbs/issues/425)) ([338e9f5](https://github.com/mauriciolauffer/cds-dbs/commit/338e9f5de9109d36013208547fc648c17ce8c7b0))
+* sqlite generated key is named lastInsertRowid ([#1501](https://github.com/mauriciolauffer/cds-dbs/issues/1501)) ([a4d3437](https://github.com/mauriciolauffer/cds-dbs/commit/a4d34378297c8afdb13abb7e664165012c36eb8f))
+* **sqlite:** default `[development]` URL to `:memory:` ([#926](https://github.com/mauriciolauffer/cds-dbs/issues/926)) ([51e8aa7](https://github.com/mauriciolauffer/cds-dbs/commit/51e8aa70868a78594626ba19c02ff495571e751f))
+* supersede potentially compromised release ([#1589](https://github.com/mauriciolauffer/cds-dbs/issues/1589)) ([bd73895](https://github.com/mauriciolauffer/cds-dbs/commit/bd7389524d00ddd6ed73fc79308e19e7bf952b53))
+* the combination of `iterator` and `SELECT.one` ([#1514](https://github.com/mauriciolauffer/cds-dbs/issues/1514)) ([4b28579](https://github.com/mauriciolauffer/cds-dbs/commit/4b2857920a7a57bcfc09a9b5fb765283cf8bd70b))
+
+
+### Changed
+
+* remove stream_compat ([#1139](https://github.com/mauriciolauffer/cds-dbs/issues/1139)) ([#1144](https://github.com/mauriciolauffer/cds-dbs/issues/1144)) ([1b8b2d9](https://github.com/mauriciolauffer/cds-dbs/commit/1b8b2d9539cd97be2cef088c98d88ef9ec7dd1bf))
+* update peer dependency to cds9 ([#1178](https://github.com/mauriciolauffer/cds-dbs/issues/1178)) ([0507edd](https://github.com/mauriciolauffer/cds-dbs/commit/0507edd4e1dcb98983b1fb65ade1344d978b7524))
+
+
+### Dependencies
+
+* The following workspace dependencies were updated
+  * dependencies
+    * @cap-js/db-service bumped from ^2.11.0 to ^3.0.0
+
 ## [2.4.0](https://github.com/cap-js/cds-dbs/compare/sqlite-v2.3.0...sqlite-v2.4.0) (2026-04-29)
 
 

@@ -4,6 +4,71 @@
 - The format is based on [Keep a Changelog](http://keepachangelog.com/).
 - This project adheres to [Semantic Versioning](http://semver.org/).
 
+## [3.0.0](https://github.com/mauriciolauffer/cds-dbs/compare/postgres-v2.3.0...postgres-v3.0.0) (2026-05-06)
+
+
+### ⚠ BREAKING CHANGES
+
+* remove PG `?` placeholder replacement ([#1180](https://github.com/mauriciolauffer/cds-dbs/issues/1180))
+* update peer dependency to cds9 ([#1178](https://github.com/mauriciolauffer/cds-dbs/issues/1178))
+* Unfiltered db constraint errors ([#1165](https://github.com/mauriciolauffer/cds-dbs/issues/1165))
+
+### refactor
+
+* Unfiltered db constraint errors ([#1165](https://github.com/mauriciolauffer/cds-dbs/issues/1165)) ([ff39e22](https://github.com/mauriciolauffer/cds-dbs/commit/ff39e22ac6cd3f20c98bc31c1a6bb828aa009796))
+
+
+### Added
+
+* **collate:** only collate if locale is provided ([#1060](https://github.com/mauriciolauffer/cds-dbs/issues/1060)) ([dedd768](https://github.com/mauriciolauffer/cds-dbs/commit/dedd768c085aa29be0e38db11f11678ff55d5b7b))
+* **forUpdate:** ignore locked ([#1074](https://github.com/mauriciolauffer/cds-dbs/issues/1074)) ([163480b](https://github.com/mauriciolauffer/cds-dbs/commit/163480b245b18a2829cd871c2f053c82bcc1abef))
+* pass through of  arbitrary client options ([#1024](https://github.com/mauriciolauffer/cds-dbs/issues/1024)) ([b090ccd](https://github.com/mauriciolauffer/cds-dbs/commit/b090ccda2dfd4fa535aa0fd5be9d2fc27531db05))
+* Persist assert_integrity feature ([#1032](https://github.com/mauriciolauffer/cds-dbs/issues/1032)) ([2956279](https://github.com/mauriciolauffer/cds-dbs/commit/2956279777ac94330c98373d8bca32cf0f8e967e))
+* remove PG `?` placeholder replacement ([#1180](https://github.com/mauriciolauffer/cds-dbs/issues/1180)) ([a1e0bd9](https://github.com/mauriciolauffer/cds-dbs/commit/a1e0bd9fe8501c284d8cbfc8d79d4dddda34c087))
+* Result set streaming ([#702](https://github.com/mauriciolauffer/cds-dbs/issues/702)) ([2fe02ea](https://github.com/mauriciolauffer/cds-dbs/commit/2fe02eafd02993e5697efbdab90ad997fb2c9e00))
+* show default pool configuration in `env` ([#1422](https://github.com/mauriciolauffer/cds-dbs/issues/1422)) ([89b397a](https://github.com/mauriciolauffer/cds-dbs/commit/89b397ade2a15be8ce81ed3e8d717fc98f1a8107))
+* supersede potentially compromised release ([#1590](https://github.com/mauriciolauffer/cds-dbs/issues/1590)) ([3be4044](https://github.com/mauriciolauffer/cds-dbs/commit/3be404417229a2dd539e4b40393d3bd346e4388c))
+* support for `node:sqlite` and `sql.js` ([#614](https://github.com/mauriciolauffer/cds-dbs/issues/614)) ([887d1bb](https://github.com/mauriciolauffer/cds-dbs/commit/887d1bba82347857364bc133983b9e16e054d6cd))
+* support for cds.Map ([#889](https://github.com/mauriciolauffer/cds-dbs/issues/889)) ([cde7514](https://github.com/mauriciolauffer/cds-dbs/commit/cde7514df20396383e0179ffce838596e3706bb2))
+
+
+### Fixed
+
+* `<expand>[@odata](https://github.com/odata).count` queries ([#966](https://github.com/mauriciolauffer/cds-dbs/issues/966)) ([6607a84](https://github.com/mauriciolauffer/cds-dbs/commit/6607a8404aa70f2f3f7c6c65c7e9b1c324a5230b))
+* `between_*` function input types ([#1468](https://github.com/mauriciolauffer/cds-dbs/issues/1468)) ([1d3905a](https://github.com/mauriciolauffer/cds-dbs/commit/1d3905a0a8e6b2a6b11c787456c86e93ac2a41cd))
+* **`cds-build`:** retain more build relevant options in the deployer app ([#1206](https://github.com/mauriciolauffer/cds-dbs/issues/1206)) ([e7ed70f](https://github.com/mauriciolauffer/cds-dbs/commit/e7ed70f36920867ec0063d29255e3681dec1b60c))
+* Adopt to recurse `DistanceTo` cqn format ([#1093](https://github.com/mauriciolauffer/cds-dbs/issues/1093)) ([246e0b3](https://github.com/mauriciolauffer/cds-dbs/commit/246e0b38840f7e132ea49cae335b6be7a55354b3))
+* Allow raw streams to have empty results ([#1224](https://github.com/mauriciolauffer/cds-dbs/issues/1224)) ([0a59e69](https://github.com/mauriciolauffer/cds-dbs/commit/0a59e69eae2f701b5c475512fd1cd83cfb586153))
+* cds build for postgres ([#1320](https://github.com/mauriciolauffer/cds-dbs/issues/1320)) ([cb27495](https://github.com/mauriciolauffer/cds-dbs/commit/cb27495889bbab8fc55d37e338f4cac8e066bd4b))
+* consider `nulls first | last` on `orderBy` ([#1064](https://github.com/mauriciolauffer/cds-dbs/issues/1064)) ([c6bed60](https://github.com/mauriciolauffer/cds-dbs/commit/c6bed60f0d93b9f4a73c976727f30172707c60d9)), closes [#1062](https://github.com/mauriciolauffer/cds-dbs/issues/1062)
+* Enable mixing stream and normal parameters in queries ([#1179](https://github.com/mauriciolauffer/cds-dbs/issues/1179)) ([7ee8083](https://github.com/mauriciolauffer/cds-dbs/commit/7ee808365426072250dd6de87abd11215f44561a))
+* enable nulls first ([#893](https://github.com/mauriciolauffer/cds-dbs/issues/893)) ([6684436](https://github.com/mauriciolauffer/cds-dbs/commit/66844363588864813d304a9dcfd66e856c7542dd))
+* ensure ordering of `ParameterStream` chunks ([#1280](https://github.com/mauriciolauffer/cds-dbs/issues/1280)) ([a49e200](https://github.com/mauriciolauffer/cds-dbs/commit/a49e200eb3c08cedcea04ffc5ecb7c664ee885c0))
+* fixed versions in postgres deployer package.json ([#1429](https://github.com/mauriciolauffer/cds-dbs/issues/1429)) ([c70ab92](https://github.com/mauriciolauffer/cds-dbs/commit/c70ab92a290e90eea64d4f54c25b301e8f3f6a0d))
+* hana groupby with path expressions ([#1493](https://github.com/mauriciolauffer/cds-dbs/issues/1493)) ([920acde](https://github.com/mauriciolauffer/cds-dbs/commit/920acdee0edb538b74d6e5cb0a82a086556df85e))
+* hierarchies in quoted mode ([3465cba](https://github.com/mauriciolauffer/cds-dbs/commit/3465cbab579d4560d12d3b230c55b746d4d3f5a5))
+* https://github.com/cap-js/cds-dbs/issues/1168 ([7ee8083](https://github.com/mauriciolauffer/cds-dbs/commit/7ee808365426072250dd6de87abd11215f44561a))
+* increase min version cap-js/db-service ([#876](https://github.com/mauriciolauffer/cds-dbs/issues/876)) ([e20eef8](https://github.com/mauriciolauffer/cds-dbs/commit/e20eef83f3ef0e1595932e31885096ca566cb153))
+* only sort by locale if locale is set ([#1193](https://github.com/mauriciolauffer/cds-dbs/issues/1193)) ([3465cba](https://github.com/mauriciolauffer/cds-dbs/commit/3465cbab579d4560d12d3b230c55b746d4d3f5a5))
+* postgres build plugin w `--production` ([#1018](https://github.com/mauriciolauffer/cds-dbs/issues/1018)) ([aafffc9](https://github.com/mauriciolauffer/cds-dbs/commit/aafffc99cb509380e5ae7738376e4d30ce5d66f2))
+* properly support `default`, `cds.on.insert` and `cds.on.update` for `UPSERT` queries ([#425](https://github.com/mauriciolauffer/cds-dbs/issues/425)) ([338e9f5](https://github.com/mauriciolauffer/cds-dbs/commit/338e9f5de9109d36013208547fc648c17ce8c7b0))
+* sort property is case insensitive ([#924](https://github.com/mauriciolauffer/cds-dbs/issues/924)) ([2c72c87](https://github.com/mauriciolauffer/cds-dbs/commit/2c72c871d6c7f65797b8bd8692305149b3ea65f8))
+* starts endswith for null values ([#975](https://github.com/mauriciolauffer/cds-dbs/issues/975)) ([f0330bc](https://github.com/mauriciolauffer/cds-dbs/commit/f0330bc334fd3a8ed5377afcdd04b731baa8c753))
+* supersede potentially compromised release ([#1589](https://github.com/mauriciolauffer/cds-dbs/issues/1589)) ([bd73895](https://github.com/mauriciolauffer/cds-dbs/commit/bd7389524d00ddd6ed73fc79308e19e7bf952b53))
+
+
+### Changed
+
+* remove stream_compat ([#1139](https://github.com/mauriciolauffer/cds-dbs/issues/1139)) ([#1144](https://github.com/mauriciolauffer/cds-dbs/issues/1144)) ([1b8b2d9](https://github.com/mauriciolauffer/cds-dbs/commit/1b8b2d9539cd97be2cef088c98d88ef9ec7dd1bf))
+* update peer dependency to cds9 ([#1178](https://github.com/mauriciolauffer/cds-dbs/issues/1178)) ([0507edd](https://github.com/mauriciolauffer/cds-dbs/commit/0507edd4e1dcb98983b1fb65ade1344d978b7524))
+
+
+### Dependencies
+
+* The following workspace dependencies were updated
+  * dependencies
+    * @cap-js/db-service bumped from ^2.11.0 to ^3.0.0
+
 ## [2.3.0](https://github.com/cap-js/cds-dbs/compare/postgres-v2.2.2...postgres-v2.3.0) (2026-04-29)
 
 
